@@ -10,8 +10,7 @@ private:
 	float _height;
 public:
 	Triangle(float base, float height);
-	virtual float get_area(bool has_depth = false) const;
-
+	float get_area() const;
 };
 
 

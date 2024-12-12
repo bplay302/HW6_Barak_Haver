@@ -49,7 +49,7 @@ Image *ReadImage(const char* filename)
 	is.read((char*)&img->header, sizeof(ImageHeader));
 
 	// calculate image size
-	uint16_t imgsize = img->header.width * img->header.height;
+	uint32_t imgsize = img->header.width * img->header.height;
 	img->data = new char[imgsize];
 
 	// read image content
@@ -93,7 +93,7 @@ Image *GenerateDummyImage(uint16_t width, uint16_t height)
 
 int main()
 {
-	Image *im = ReadImage("img1.magi");
+	Image *im = ReadImage("img2.magi");
 	FreeImage(im);
 
 	return 0;
